@@ -1,0 +1,58 @@
+.articles {
+    background-color: $veryLightGray;
+}
+
+.article {
+    &_content h2 {
+        @include breakpoint-down(small) {
+            text-align: center;
+        }
+    }
+    &_grid {
+        display: grid;
+        gap: 1.875rem;
+        grid-template-columns: 1fr;
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &_item {
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 0px 0.125rem 0.625rem rgba(0, 0, 0, 0.15);
+        &:hover {
+            transform: scale(1.025);
+            transition: all 200ms;
+        }
+    }
+    &_image {
+        height: 12.5rem;
+        background-size: cover;
+        background-repeat: none;
+        background-position: center center;
+    }
+    &_text {
+        color: $grayishBlue;
+        padding: 1.875rem 1.875rem 2.25rem 1.875rem;
+        @include breakpoint-up(medium) {
+            padding: 1.875rem 1.5625rem;
+        }
+    }
+    &_author {
+        font-size: 0.635rem;
+        margin-bottom: 0.75rem;
+    }
+    &_title {
+        color: $darkBlue;
+        font-size: 1.0625rem;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+    }
+    &_description {
+        font-size: 0.8125rem;
+    }
+}

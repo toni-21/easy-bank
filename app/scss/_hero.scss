@@ -1,0 +1,73 @@
+.hero {
+    background-color: $veryLightGray;
+    .container {
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &_image {
+        background-image: url('/images/bg-intro-mobile.svg');
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.4rem;
+        @include breakpoint-up(medium) {
+            min-height: 25rem;
+            background-position: center 66.5%;
+        }
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 2;
+            background-image: none;
+            min-height: 40rem;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            // background-image: url('/images/bg-intro-desktop.svg');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            height: 100%;
+            width: 100%;
+            @include breakpoint-up(medium) {
+                background-image: none;
+            }
+            @include breakpoint-up(large) {
+                width: 150%;
+                background-image: url('/images/bg-intro-desktop.svg');
+                background-size: 120%;
+                background-position: -30% 75%;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/images/image-mockups.png');
+            background-size: 88%;
+            background-repeat: no-repeat;
+            background-position: center 90%;
+            height: 100%;
+            width: 100%;
+            @include breakpoint-up(medium) {
+                background-size: 64%;
+            }
+            @include breakpoint-up(large) {
+                height: 119%;
+                width: 123%;
+                background-size: 93%;
+                left: 25%;
+            }
+        }
+    }
+    &_text {
+        text-align: center;
+        @include breakpoint-up(large) {
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+    }
+}

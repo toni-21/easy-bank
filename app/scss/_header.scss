@@ -1,0 +1,111 @@
+.header {
+    position: relative;
+    z-index: 1;
+    &.open {
+        .header_toggle {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .overlay {
+        background-image: linear-gradient($darkBlue, transparent);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0;
+        &.fade-in {
+            display: block;
+            @include breakpoint-up(large) {
+                display: none;
+            }
+        }
+        &.fade-out {
+            display: block;
+            @include breakpoint-up(large) {
+                display: none;
+            }
+        }
+    }
+    nav {
+        position: relative;
+        background-color: $white;
+        padding-top: 1.10625rem;
+        padding-bottom: 1.10625rem;
+    }
+    &_logo {
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+    &_toggle {
+        //mobile toggle menu
+        >span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &_links {
+        // border: 1px solid red;
+        a {
+            position: relative;
+            font-size: $font-sm;
+            color: $grayishBlue;
+            transition: color 300ms ease-in-out;
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                background: linear-gradient(to right, $limeGreen, $brightCyan);
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                opacity: 0;
+                transition: 300ms ease-in-out;
+            }
+            &:hover {
+                color: $darkBlue;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &_menu {
+        background: $white;
+        position: absolute;
+        padding: 1.625rem;
+        margin-top: 1.5rem;
+        border-radius: 3px;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        a {
+            display: block;
+            padding: 0.625rem;
+            color: $darkBlue;
+            font-size: $font-med;
+            text-align: center;
+        }
+    }
+}
