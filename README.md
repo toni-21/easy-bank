@@ -43,7 +43,7 @@ Below there are two screenshots from the project. The first is the visualization
 ### Links
 
 - Solution URL: [SOLUTION ON FRONTEND MENTOR](https://www.frontendmentor.io/solutions/responsive-landing-page-built-using-scss-flexbox-and-css-grid-tyrnhpTYA)
-- Live Site URL: [GITHUB PAGES SITE](https://toni-21.github.io/easy-bank/)
+- Live Site URL: [LIVE SITE](https://easy-bank-black.vercel.app/)
 
 ## My process
 
