@@ -36,14 +36,14 @@ Below there are two screenshots from the project. The first is the visualization
 
 <center>Mobile view screenshot</center>
 
-![](screenshots/mobile.png)
+![](screenshots/mobile.jpg)
 
 
 
 ### Links
 
-- Solution URL: [SOLUTION ON FRONTEND MENTOR](https://www.frontendmentor.io/solutions/single-price-grid-component-using-flexbox-2jSwQYi5H)
-- Live Site URL: [GITHUB PAGES SITE](https://toni-21.github.io/single-grid-component/)
+- Solution URL: [SOLUTION ON FRONTEND MENTOR](https://www.frontendmentor.io/solutions/responsive-landing-page-built-using-scss-flexbox-and-css-grid-tyrnhpTYA)
+- Live Site URL: [GITHUB PAGES SITE](https://toni-21.github.io/easy-bank/)
 
 ## My process
 
